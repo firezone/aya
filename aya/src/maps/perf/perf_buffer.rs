@@ -122,7 +122,7 @@ impl PerfEventArrayBuffer {
             PerfEventConfig::Software(SoftwareEvent::BpfOutput),
             PerfEventScope::AllProcessesOneCpu { cpu },
             SamplePolicy::Period(1),
-            WakeupPolicy::Events(1),
+            WakeupPolicy::Events(256),
             false,
             PERF_FLAG_FD_CLOEXEC,
         )
